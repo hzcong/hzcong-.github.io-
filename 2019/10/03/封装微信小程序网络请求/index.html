@@ -371,11 +371,11 @@
         
         <div class="entry-content">
           <blockquote>
-<p>在微信小程序的开发中，网络请求是使用的最频繁的，觉得小程序的wx.request写在代码里面实在不好看，显得冗余。要使代码更优雅一些，于是想个办法封装一下。</p>
+<p>在微信小程序的开发中，网络请求是使用的最频繁的，觉得小程序的 wx.request 写在代码里面实在不好看，显得冗余。要使代码更优雅一些，于是想个办法封装一下。</p>
 </blockquote>
-<h3 id="封装wx-request"><a href="#封装wx-request" class="headerlink" title="封装wx.request"></a>封装wx.request</h3><ol>
-<li>打开小程序的工程目录，新建一个utils文件夹，用于存放我们的工具类。</li>
-<li>在utils文件夹下新建一个util.js文件，用于封装我们的wx.request,以及其他工具函数，代码如下：</li>
+<h3 id="封装-wx-request"><a href="#封装-wx-request" class="headerlink" title="封装 wx.request"></a>封装 wx.request</h3><ol>
+<li>打开小程序的工程目录，新建一个 utils 文件夹，用于存放我们的工具类。</li>
+<li>在 utils 文件夹下新建一个 util.js 文件，用于封装我们的 wx.request,以及其他工具函数，代码如下：</li>
 </ol>
 <pre><code class="JavaScript">const app = getApp();
 
@@ -398,7 +398,7 @@ function request(url, data = {}, method = &quot;GET&quot;) {
           case 0:
             resolve(res.data);
             break;
-            //状态码为401，token失效 
+            //状态码为401，token失效
           case 401:
             // 清除登录相关内容
             try {
@@ -454,10 +454,10 @@ util.request(&#39;https://xxxx&#39;, params, &#39;POST&#39;)
       });
 
 </code></pre>
-<h3 id="统一API，分而治之"><a href="#统一API，分而治之" class="headerlink" title="统一API，分而治之"></a>统一API，分而治之</h3><blockquote>
-<p>也许你会说，不就是把wx.request封装了一下嘛。当然，我们还可以更进一步，因为项目中的api大部分都是可以复用的，我们可以把需要网络请求的API统一管理起来（所以，有一份漂亮的API文档很重要，比如后台是用Java的，可以使用swagger等自动生成接口文档）。</p>
+<h3 id="统一-API，分而治之"><a href="#统一-API，分而治之" class="headerlink" title="统一 API，分而治之"></a>统一 API，分而治之</h3><blockquote>
+<p>也许你会说，不就是把 wx.request 封装了一下嘛。当然，我们还可以更进一步，因为项目中的 api 大部分都是可以复用的，我们可以把需要网络请求的 API 统一管理起来（所以，有一份漂亮的 API 文档很重要，比如后台是用 Java 的，可以使用 swagger 等自动生成接口文档）。</p>
 </blockquote>
-<p>我们可以在小程序工程项目里面新建一个文件夹为config，在里面新建一个api.js文件。</p>
+<p>我们可以在小程序工程项目里面新建一个文件夹为 config，在里面新建一个 api.js 文件。</p>
 <p>api.js</p>
 <pre><code class="JavaScript">// 以下是业务服务器API地址
 // 本机开发时使用
@@ -489,15 +489,15 @@ util.request(api.xxx, params, &#39;POST&#39;)
       })；
 
 </code></pre>
-<p>代码似乎优雅了许多，请求失败也有错误提示，相对于开发或用户，体验会好很多。当然在非常复杂的系统，也可以再把api分类会更好一些，每个模块一个api文件，一旦需求多了，业务复杂了，分而治之总是个不错的办法。</p>
+<p>代码似乎优雅了许多，请求失败也有错误提示，相对于开发或用户，体验会好很多。当然在非常复杂的系统，也可以再把 api 分类会更好一些，每个模块一个 api 文件，一旦需求多了，业务复杂了，分而治之总是个不错的办法。</p>
 <blockquote>
-<p>结语，另外，我们也可以往更抽象的去考虑，把一些业务逻辑标准化，UI标准化，接口标准化，这样我们也许可以做一个只需设定一些规则，做简单配置就可以生成小程序或前后端的代码的工具，这个值得我们思考。</p>
+<p>结语，另外，我们也可以往更抽象的去考虑，把一些业务逻辑标准化，UI 标准化，接口标准化，这样我们也许可以做一个只需设定一些规则，做简单配置就可以生成小程序或前后端的代码的工具，这个值得我们思考。</p>
 </blockquote>
 
         </div>
         <section class="author-profile">
           <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            <a class="profile gravatar"><img src="/images/avatar.jpg" itemprop="image" alt="Hzcong" height="70" width="70"></a>
+            <a class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/custom/avatar.jpg" itemprop="image" alt="Hzcong" height="70" width="70"></a>
             <div class="meta">
               <span class="title">Author</span>
               <h3 itemprop="name">
@@ -535,7 +535,7 @@ util.request(api.xxx, params, &#39;POST&#39;)
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre half previous">
           
             <a href="/2019/10/03/前后端联调神器/" rel="prev">
               <div class="background">
@@ -551,6 +551,23 @@ util.request(api.xxx, params, &#39;POST&#39;)
             </a>
           </div>
         
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2018/12/12/Hexo-Theme-Sakura/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo-Theme-Sakura</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
         
       </section>
       
@@ -910,5 +927,5 @@ $(document).ready(function() {
     })
   });
 </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":-20,"vOffset":-50},"mobile":{"show":true,"scale":0.8},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"left","width":150,"height":300,"hOffset":-20,"vOffset":-50},"mobile":{"show":true,"scale":0.8},"log":false});</script></body>
 </html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>黄志聪のブログ</title>
+  
+  <subtitle>从入门到放弃治疗</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2019-10-13T11:28:45.582Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>hzcong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前后端联调那些事</title>
+    <link href="/2019/10/03/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83%E7%A5%9E%E5%99%A8/"/>
+    <id>/2019/10/03/前后端联调神器/</id>
+    <published>2019-10-03T07:14:00.000Z</published>
+    <updated>2019-10-13T11:28:45.582Z</updated>
+    
+    <summary type="html">
+    
+      前后端协作
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前后端协作" scheme="/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>封装微信小程序网络请求</title>
+    <link href="/2019/10/03/%E5%B0%81%E8%A3%85%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
+    <id>/2019/10/03/封装微信小程序网络请求/</id>
+    <published>2019-10-02T19:29:00.000Z</published>
+    <updated>2019-10-13T11:48:44.614Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;在微信小程序的开发中，网络请求是使用的最频繁的，觉得小程序的wx.request写在代码里面实在不好看，显得冗余。要使代码更优雅一些，于是想个办法封装一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;封装wx-request&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="wechat" scheme="/categories/wechat/"/>
+    
+    
+      <category term="微信小程序" scheme="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+</feed>

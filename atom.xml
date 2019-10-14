@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-10T03:30:17.981Z</updated>
+  <updated>2019-10-14T04:43:32.755Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2019/10/13/hello-world/"/>
     <id>/2019/10/13/hello-world/</id>
     <published>2019-10-13T14:18:45.099Z</published>
-    <updated>2019-10-10T03:30:17.981Z</updated>
+    <updated>2019-10-14T04:43:32.755Z</updated>
     
     <summary type="html">
     
@@ -34,6 +34,8 @@
       
     
     </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
   </entry>
@@ -63,7 +65,7 @@
     <link href="/2019/10/03/%E5%B0%81%E8%A3%85%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
     <id>/2019/10/03/封装微信小程序网络请求/</id>
     <published>2019-10-02T19:29:00.000Z</published>
-    <updated>2019-10-13T17:40:49.027Z</updated>
+    <updated>2019-10-14T04:46:52.361Z</updated>
     
     <summary type="html">
     
@@ -80,7 +82,7 @@
     
     </summary>
     
-      <category term="wechat" scheme="/categories/wechat/"/>
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="微信小程序" scheme="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>

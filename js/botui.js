@@ -30,7 +30,7 @@ function bot_ui_ini() {
         }).then(function () {
             botui.message.add({
                 delay: 1100,
-                content: "喜欢唱 跳 rap 篮球 Music~"
+                content: "喜欢 唱 跳 rap 篮球🏀 Music~"
             }).then(function () {
                 botui.action.button({
                     delay: 1600,

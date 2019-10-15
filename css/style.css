@@ -3942,7 +3942,8 @@ li.feature-2 {
 @media(max-width:860px) {
     #centerbg {
         height:300px;
-        background-attachment:scroll
+        background-attachment:scroll;
+        background-position: center center;
     }
     .focusinfo .header-tou img {
         width: 100px !important;
@@ -4087,7 +4088,7 @@ li.feature-2 {
     line-height:30px;
     border-radius:10px;
     box-sizing:initial;
-    white-space:nowrap
+    /* white-space:nowrap */
 }
 .header-info:before {
     content:"";

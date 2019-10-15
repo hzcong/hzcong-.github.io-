@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Hello World | 黄志聪のブログ</title>
+  <title itemprop="name">前后端联调那些事 | 黄志聪のブログ</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -77,7 +77,7 @@
         </a>
       </div>
       <div class="header-info">
-        <p>走自己的路，让别人有路可走</p>
+        <p>行色匆匆低头赶路的年代，要做一个偶尔抬头看看星空的人。</p>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img
@@ -326,6 +326,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png);" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      前后端联调那些事</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">hzcong</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-10-3<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -333,42 +357,156 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-          <header class="entry-header">
-            <h1 class="entry-title">Hello World</h1>
-            <p class="entry-census">&nbsp;·&nbsp;2019-10-13&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
-        
         <div class="entry-content">
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+          <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>前后端分离，是当今很流行的开发模式，后端只负责数据的提供和计算，而前端则负责拿到数据，组织数据并展现，前后端仅仅通过接口来联调。结构清晰，关注点分离，前后端相对独立并松耦合，这种方式使得前后端都更加专注。</p>
+<p>但是这种想法依然还是很理想化，前后端集成往往还是一个很头痛的问题。比如在最后需要集成的时候，我们才发现最开始商量好的数据结构发生了变化，而且这种变化往往是在所难免的，这样就会增加大量的集成时间。</p>
+<h3 id="谁来买单"><a href="#谁来买单" class="headerlink" title="谁来买单"></a>谁来买单</h3><p>谈到了前后端分离，那么在所难免，会遇到一些集成的问题：一拨人在全心全意的进行前端开发，另一拨人在心无旁骛的做后端开发，那么谁应该为集成买单呢？在现在这个持续集成、持续交付的年代里，我们应该如何去保证双方不会分道扬镳、越走越远呢？</p>
+<p>所以，迫在眉睫的事情，就是接口的定义与规范。双方就 API 相关内容，URL、参数、类型、请求方法等达成一致。一般以接口文档的方式，但是这份文档并不是创建后就不能修改的，如果一开始没有设计好，反而很有可能会频繁的修改，这个时候，要让前后端能实时追踪最新的 API 就成了一个难题。</p>
+<h3 id="接口不规范，同事两行泪"><a href="#接口不规范，同事两行泪" class="headerlink" title="接口不规范，同事两行泪"></a>接口不规范，同事两行泪</h3><p>前后端分离的时代，接口设计是重中之重，接口规范，关乎着团队协作、项目维护的时间成本。而 RESTful 风格的 API 与前后端分离开发正是天造地设的一对，它能有效的使接口规范起来。</p>
+<h4 id="什么是-RESTful？"><a href="#什么是-RESTful？" class="headerlink" title="什么是 RESTful？"></a>什么是 RESTful？</h4><p>RESTful（即 Representational State Transfer 的缩写）其实是一个开发理念，是对 http 的很好的诠释。RESTful 架构，目前最流行的一种互联网软件架构。它结构清晰、符合标准、易于理解、扩展方便，所以正得到越来越多网站的采用。</p>
+<p>这里简单介绍几点，大家可以感受一下。</p>
+<h5 id="对于资源的操作类型应该是通过-http-动词表示。"><a href="#对于资源的操作类型应该是通过-http-动词表示。" class="headerlink" title="对于资源的操作类型应该是通过 http 动词表示。"></a>对于资源的操作类型应该是通过 http 动词表示。</h5><pre><code>GET /zoos：列出所有动物园
+POST /zoos：新建一个动物园
+GET /zoos/ID：获取某个指定动物园的信息
+PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）
+DELETE /zoos/ID：删除某个动物园
+GET /zoos/ID/animals：列出某个指定动物园的所有动物
+DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
+</code></pre><h5 id="HTTP-Method-分别对于资源的-CURD-操作"><a href="#HTTP-Method-分别对于资源的-CURD-操作" class="headerlink" title="HTTP Method 分别对于资源的 CURD 操作"></a>HTTP Method 分别对于资源的 CURD 操作</h5><pre><code>GET（SELECT）：从服务器取出资源（一项或多项）。
+POST（CREATE）：在服务器新建一个资源。
+PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。
+PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。
+DELETE（DELETE）：从服务器删除资源。
+</code></pre><p>保证 POST，PUT，DELETE，PATCH，GET 操作幂等性。</p>
+<p>……</p>
+<p>总结一点，优秀的 RESTful 接口设计，能够根据请求的路径及请求方法就能看出这个接口主要是对具体某个资源进行什么方法的操作以及返回数据的规则等等。</p>
+<h3 id="别再写开发文档了"><a href="#别再写开发文档了" class="headerlink" title="别再写开发文档了"></a>别再写开发文档了</h3><p>接口文档能有效的降低团队沟通成本，但维护接口文档的成本也相应更大。因需求变更等原因，免不了要修改后台代码，可能是增删参数，可能是修改方法，如果接口文档忘记更新了，前端开发时，前端开发时，看着错误的文档开发，发现接口动不动就 500、404、400，然后就噼里啪啦的各种问，结果才发现，原来罪魁祸首是忘记更新开发文档。而且，多次修改开发文档，自己也不知道哪一个是最新的了。此时，你会问可以不写开发文档还能保证接口的实时性与准确性吗？答案是可以的，为解决开发人员的痛点，swagger UI 应运而生。</p>
+<h4 id="Swagger-到底是什么玩意？"><a href="#Swagger-到底是什么玩意？" class="headerlink" title="Swagger 到底是什么玩意？"></a>Swagger 到底是什么玩意？</h4><p>Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。总体目标是使客户端和文件系统作为服务器以同样的速度来更新文件的方法，参数和模型紧密集成到服务器端的代码，允许 API 来始终保持同步。</p>
+<p>作用：接口的文档在线自动生成、接口测试。</p>
+<p>说白了就是，实时更新接口文档，提供在线的接口测试（可以不用再使用 postman 测试了，这个功能还是非常便利的，并且请求参数的格式都为你生成好了）</p>
+<h4 id="SpringBoot-整合-Swagger-UI"><a href="#SpringBoot-整合-Swagger-UI" class="headerlink" title="SpringBoot 整合 Swagger UI"></a>SpringBoot 整合 Swagger UI</h4><p>Talk is cheap，这里以 SpringBoot 整合 Swagger UI 作为例子。</p>
+<h5 id="添加-maven-依赖"><a href="#添加-maven-依赖" class="headerlink" title="添加 maven 依赖"></a>添加 maven 依赖</h5><pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+    &lt;version&gt;2.7.0&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+    &lt;version&gt;2.7.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><h5 id="Swagger2-配置"><a href="#Swagger2-配置" class="headerlink" title="Swagger2 配置"></a>Swagger2 配置</h5><p>配置 swagger 的过程也是比较简单，只需要一个配置类.</p>
+<pre><code class="Java">
+import io.swagger.annotations.ApiOperation;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import java.util.List;
+
+import static com.google.common.collect.Lists.newArrayList;
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig implements WebMvcConfigurer {
+
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+            .apiInfo(apiInfo())
+            .select()
+            //加了ApiOperation注解的类，才生成接口文档
+            .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+            //包下的类，才生成接口文档
+            //.apis(RequestHandlerSelectors.basePackage(&quot;com.xxxx.controller&quot;))
+            .paths(PathSelectors.any())
+            .build()
+            .securitySchemes(security());
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+            .title(&quot;XXX项目&quot;)
+            .description(&quot;接口文档&quot;)
+            .termsOfServiceUrl(&quot;https://www.xxx.com&quot;)
+            .version(&quot;2.0.0&quot;)
+            .build();
+    }
+
+    // 配置token请求头
+    private List&lt;ApiKey&gt; security() {
+        return newArrayList(
+            new ApiKey(&quot;token&quot;, &quot;token&quot;, &quot;header&quot;)
+        );
+    }
+
+}
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>这里提供一个配置类，首先通过@EnableSwagger2 注解启用 Swagger2，然后配置一个 Docket Bean，这个 Bean 中，配置映射路径和要扫描的接口的位置，在 apiInfo 中，主要配置一下 Swagger2 文档网站的信息，最后是配置了接口的安全验证，如需要 token 凭证等等。</p>
+<h5 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h5><p>swagger 是根据注解扫描生成文档的，所以熟悉这些注解很重要</p>
+<pre><code>@Api：用在请求的类上，表示对类的说明
+    tags=&quot;说明该类的作用，可以在UI界面上看到的注解&quot;
+    value=&quot;该参数没什么意义，在UI界面上也看到，所以不需要配置&quot;
+
+@ApiOperation：用在请求的方法上，说明方法的用途、作用
+    value=&quot;说明方法的用途、作用&quot;
+    notes=&quot;方法的备注说明&quot;
+
+@ApiImplicitParams：用在请求的方法上，表示一组参数说明
+    @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面
+        name：参数名
+        value：参数的汉字说明、解释
+        required：参数是否必须传
+        paramType：参数放在哪个地方
+            · header --&gt; 请求参数的获取：@RequestHeader
+            · query --&gt; 请求参数的获取：@RequestParam
+            · path（用于restful接口）--&gt; 请求参数的获取：@PathVariable
+            · body（不常用）
+            · form（不常用）
+        dataType：参数类型，默认String，其它值dataType=&quot;Integer&quot;
+        defaultValue：参数的默认值
+
+@ApiResponses：用在请求的方法上，表示一组响应
+    @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息
+        code：数字，例如400
+        message：信息，例如&quot;请求参数没填好&quot;
+        response：抛出异常的类
+
+@ApiModel：用于响应类上，表示一个返回响应数据的信息
+            （这种一般用在post创建的时候，使用@RequestBody这样的场景，
+            请求参数无法使用@ApiImplicitParam注解进行描述的时候）
+    @ApiModelProperty：用在属性上，描述响应类的属性
+</code></pre><p>这里只做简单介绍 RESTful + swagger，希望可以尝试下。</p>
+<blockquote>
+<p>结语，一个人可以走的很快，一群人才能走的更远，团队合作很重要。</p>
+</blockquote>
 
         </div>
+
+ 
         <section class="author-profile">
           <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            <a class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+            <a class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/custom/avatar.jpg" itemprop="image" alt="hzcong" height="70" width="70"></a>
             <div class="meta">
               <span class="title">Author</span>
               <h3 itemprop="name">
-              <a href="" itemprop="url" rel="author"></a>
+              <a href="" itemprop="url" rel="author">hzcong</a>
               </h3>
             </div>
           </div>
           <hr>
-          <p><i class="iconfont icon-write"></i></p>
+          <p><i class="iconfont icon-write"></i>走自己的路，让别人有路可走</p>
         </section>
+     
+
         <!-- .entry-content -->
         <div class="single-reward">
           <div class="reward-open">赏<div class="reward-main">
@@ -399,15 +537,15 @@
           
             <div class="post-nepre full next">
           
-            <a href="/2019/10/03/前后端联调神器/" rel="next">
+            <a href="/2019/10/03/封装微信小程序网络请求/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                前后端联调那些事</h3>
+                封装微信小程序网络请求</h3>
                 <hr>
               </div>
             </a>
@@ -484,7 +622,7 @@
     </div>
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme by Sakura, Powered by Hexo, Hosted by Github Pages</a>
+        <span style="color: #b9b9b9;">Theme by Sakura, Powered by Hexo</a>
         </span>
       </p>
     </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-10-14T04:43:32.755Z</updated>
+  <updated>2019-10-14T15:56:05.742Z</updated>
   <id>/</id>
   
   <author>
@@ -17,39 +17,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2019/10/13/hello-world/"/>
-    <id>/2019/10/13/hello-world/</id>
-    <published>2019-10-13T14:18:45.099Z</published>
-    <updated>2019-10-14T04:43:32.755Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>前后端联调那些事</title>
-    <link href="/2019/10/03/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83%E7%A5%9E%E5%99%A8/"/>
-    <id>/2019/10/03/前后端联调神器/</id>
+    <link href="/2019/10/03/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%81%94%E8%B0%83%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>/2019/10/03/前后端联调那些事/</id>
     <published>2019-10-03T07:14:00.000Z</published>
-    <updated>2019-10-13T17:54:32.626Z</updated>
+    <updated>2019-10-14T15:56:05.742Z</updated>
     
     <summary type="html">
     
-      前后端协作
+      前后端分离，那么在所难免，会遇到一些集成的问题：一拨人在全心全意的进行前端开发，另一拨人在心无旁骛的做后端开发，那么谁应该为集成买单呢？在现在这个持续集成、持续交付的年代里，我们应该如何去保证双方不会分道扬镳、越走越远呢？
     
     </summary>
     
@@ -65,20 +41,11 @@
     <link href="/2019/10/03/%E5%B0%81%E8%A3%85%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
     <id>/2019/10/03/封装微信小程序网络请求/</id>
     <published>2019-10-02T19:29:00.000Z</published>
-    <updated>2019-10-14T04:46:52.361Z</updated>
+    <updated>2019-10-14T15:54:50.366Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;在微信小程序的开发中，网络请求是使用的最频繁的，觉得小程序的 wx.request 写在代码里面实在不好看，显得冗余。要使代码更优雅一些，于是想个办法封装一下。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3
-        
-      
+      在微信小程序的开发中，网络请求是使用的最频繁的，觉得小程序的 wx.request 写在代码里面实在不好看，显得冗余。要使代码更优雅一些，于是想个办法封装一下。
     
     </summary>
     

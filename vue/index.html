@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Vue.js使用分享</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.type = 'text/css'
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css'
+      document.getElementsByTagName('head')[0].appendChild(link)
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="main-page">
+          <h2>Vue.js使用分享</h2>
+          <span style="margin-left: 500px;">by hzcong</span>
+        </section>
+        <section
+          data-markdown
+          data-separator="---"
+          data-separator-vertical="--"
+        >
+          <script type="text/template">
+            ## Hello Vue.js!
+            ```html
+            <div id="app">
+            	<p>{{ message  }}</p>
+            	<input v-model="message ">
+            </div>
+            ```
+            ```javascript
+            new Vue({
+            	el: '#app',
+            	data: {
+            		message : 'Hello Vue.js!'
+            	}
+            });
+            ```
+          </script>
+        </section>
+        <section
+          data-markdown
+          data-separator="---"
+          data-separator-vertical="--"
+        >
+          <script type="text/template">
+            ## Vue.js 安装
+
+            --
+            #### 1、直接下载 js 文件
+
+            在官网下载vue.min.js文件，然后在script标签中引用，如下：
+            ```html
+            <script src="/yourdir/vue.min.js"/>
+            // vue.min.js地址：http://vuejs.org/js/vue.min.js
+            ```
+            --
+            #### 2、使用 CDN 方法
+            推荐使用bootcdn的CDN服务，比较稳定，而且可选择对应的版本。
+            bootcdn vue地址：http://www.bootcdn.cn/vue/
+          </script>
+        </section>
+        <section
+          data-markdown
+          data-separator="---"
+          data-separator-vertical="--"
+        >
+          <script type="text/template">
+            ## 基本语法
+            - 数据绑定
+            - 样式绑定
+            - 事件绑定
+            - 修饰符
+            - 过滤器
+            - 指令
+            --
+            ## 数据绑定
+            ```html
+            <ul id="appList" v-if="todos.length > 0">
+            	<li v-for="todo in todos">{{todo.text}}</li>
+            </ul>
+            ```
+            ```javascript
+            new Vue({
+              el: '#appList',
+              data: {
+                todos: [
+                  {text: 'HTML'},
+                  {text: 'CSS'},
+                  {text: 'javascript'}
+                ]
+              }
+            });
+            ```
+            --
+            ## 样式绑定
+            ```html
+            <div id="app">
+            	<div v-bind:class="classList">{{ classList | json}}</div>
+            </div>
+            ```
+            ```javascript
+            new Vue({
+              el: '#app',
+              data: {
+                classList: ["classA", "classB"]
+              }
+            });
+            ```
+            --
+            ## 事件绑定
+            ```html
+            <fieldset id="appEvent">
+            	<legend>事件绑定</legend>
+            	<p>{{message}}</p>
+            	<button v-on:click="reverseMessage">reverse message</button>
+            </fieldset>
+            ```
+            ```javascript
+            var appEventVue = new Vue({
+              el: '#appEvent',
+              data: {
+                message: 'hello vuejs!'
+              },
+              methods: {
+                reverseMessage: function() {
+                  this.message = this.message.split('').reverse().join('');
+                }
+              }
+            });
+            ```
+            --
+            ## 修饰符
+            ```html
+            <a v-on:click.stop.prevent="do">
+            <input v-on:keyup.13="submit">
+            <input @keyup.enter="submit">
+            ```
+            Note:
+            13是指keyCode为13的时候触发submit。
+            按键名支持，enter, tab, delete, esc, space, down, up ,left, right
+            --
+             ## 过滤器
+            过滤器的作用是在模型的属性指输出或写入时，进行转化。
+            ```javascript
+            Vue.filter('wrap', function (value, begin, end) {
+              return begin + value + end
+            });
+            ```
+            ```html
+            <span v-text="message | wrap 'before' 'after'"></span>
+            ```
+            Note:
+            双向指令见demo
+            --
+            ## 指令
+            指令作用是提供一种机制，将数据的变化转化为DOM行为。
+            ```javascript
+            Vue.directive('log', {
+              bind: function () {
+                // 准备工作
+                // 例如，添加事件处理器或只需要运行一次的高耗任务
+              },
+              update: function (newValue, oldValue) {
+                console.log('new value is ', newValue);
+              },
+              unbind: function () {
+                // 清理工作
+                // 例如，删除 bind() 添加的事件监听器
+              }
+            });
+            ```
+            ```html
+            <div v-log="message">{{message}}</div>
+            ```
+          </script>
+        </section>
+        <section
+          data-markdown
+          data-separator="---"
+          data-separator-vertical="--"
+        >
+          <script type="text/template">
+            ## 组件化
+            - 注册和使用
+            - props
+            - 父子组件通信
+            --
+            ## 注册和使用
+            ```javascript
+            // 创建
+            var MyComponent = Vue.extend({
+            	// 选项...
+            	template: '<div>A custom component!</div>'
+            });
+            // 注册
+            Vue.component('demo', MyComponent)
+            ```
+            ```html
+            <demo></demo>
+            ```
+            --
+            ## props
+            父组件向子组件传递数据
+            ```javascript
+            Vue.component('child', {
+              // 声明 props
+              props: ['msg'],
+              // prop 可以用在模板内
+              // 可以用 `this.msg` 设置
+              template: '<span>{{ msg }}</span>'
+            })
+            ```
+            ```html
+            <child msg="hello!"></child>
+            ```
+            --
+            ## 父子组件通信
+            子组件通过事件冒泡通知父组件状态变化。
+            ```html
+            <template id="child">
+            	<input v-model="msg" /> <button @click="notify">dispatch event</button>
+            </template>
+            <div id="parent">
+            	<p>messages: {{messages | json}}</p><child></child>
+            </div>
+            ```
+            ```javascript
+            Vue.component('child', {
+              template: '#child',
+              data: function () {return { msg: 'hello' }},
+              methods: { notify: function () {
+                  this.$dispatch('child-msg', this.msg)
+              } }
+            });
+            new Vue({
+              el: '#parent',
+              data: { messages: [] },
+              events: {'child-msg': function (msg) {
+                  this.messages.push(msg)
+              } }
+            });
+            ```
+          </script>
+        </section>
+        <section
+          data-markdown
+          data-separator="---"
+          data-separator-vertical="--"
+        >
+          <script type="text/template">
+            ## 大型应用构建
+            - 单文件组件
+            - 插件
+            --
+            ## 单文件组件
+            使用vue文件去包含一个组件的全部内容。
+            ![vue文件](http://cn.vuejs.org/images/vue-component.png)
+            --
+            ## 插件
+            - vue-resource
+            - vue-devtools
+            - vue-router
+            - vue-validator
+            Note:
+            vue-resource: ajax加载；vue-devtools: chrome开发者工具；vue-router 单页面路由;vue-validator 表单验证。
+          </script>
+        </section>
+        <section>
+          <h2>Q & A</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+      })
+    </script>
+  </body>
+</html>

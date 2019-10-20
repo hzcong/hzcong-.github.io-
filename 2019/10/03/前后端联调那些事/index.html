@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(0).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/cover/(8).jpg.webp".split(",");
+  var bg = "/images/cover/1.jpg,/images/cover/2.jpg,/images/cover/3.jpg,/images/cover/4.jpg".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -328,8 +328,10 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png);" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
-    </div>
+    
+      <div class="pattern-attachment-img lazyload" style="background-image: url(http://pzjxaqah0.bkt.clouddn.com/blog/img/前后端联调.jpg);" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://pzjxaqah0.bkt.clouddn.com/blog/img/前后端联调.jpg">
+      </div>
+      
     <header class="pattern-header single-header">
       <h1 class="entry-title">
       前后端联调那些事</h1>
@@ -356,7 +358,7 @@
       <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
+        <!--  -->
         <div class="entry-content">
           <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>前后端分离，是当今很流行的开发模式，后端只负责数据的提供和计算，而前端则负责拿到数据，组织数据并展现，前后端仅仅通过接口来联调。结构清晰，关注点分离，前后端相对独立并松耦合，这种方式使得前后端都更加专注。</p>
 <p>但是这种想法依然还是很理想化，前后端集成往往还是一个很头痛的问题。比如在最后需要集成的时候，我们才发现最开始商量好的数据结构发生了变化，而且这种变化往往是在所难免的，这样就会增加大量的集成时间。</p>
@@ -539,7 +541,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
           
             <a href="/2019/10/03/封装微信小程序网络请求/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/hzcong/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://pzjxaqah0.bkt.clouddn.com/blog/img/小程序banner.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://pzjxaqah0.bkt.clouddn.com/blog/img/小程序banner.png">
               </div>
               <span class="label">
               Next Post</span>

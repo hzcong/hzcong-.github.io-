@@ -65,18 +65,19 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "然后~其实我也没想好怎么介绍自己"
+                content: "然后~"
             })
-            // .then(function () {
-            //     botui.message.add({
-            //         delay: 1500,
-            //         content: "平时自己喜欢用技术去解决生活上的一些问题"
-            //     })
-                // .then(function () {
-                //     botui.message.add({
-                //         delay: 1200,
-                //         content: "主攻 Java后端和 Vue前端，略懂 STATA，偶尔也折腾 HTML/CSS/JavaScript/PHP"
-                //     }).then(function () {
+            .then(function () {
+                botui.message.add({
+                    delay: 1500,
+                    content: "没有然后了~"
+                })
+                .then(function () {
+                    botui.message.add({
+                        delay: 1200,
+                        content: "其实我也没想好怎么介绍自己~"
+                    })
+                //.then(function () {
                 //         botui.message.add({
                 //             delay: 1500,
                 //             content: "主攻 Java后端和 Vue前端，略懂 STATA，偶尔也折腾 HTML/CSS/JavaScript/PHP"
@@ -102,8 +103,8 @@ function bot_ui_ini() {
                 //             })
                 //         })
                 //     })
-                // })
-            // })
+                })
+            })
         }
         // thirdpart = function () {
         //     botui.message.add({
